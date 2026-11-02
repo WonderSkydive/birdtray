@@ -20,7 +20,7 @@ Kubuntu 26.04. Esta publicación cambia numeración y documentación, conservand
 el comportamiento del monitor.
 
 Versión interna Debian: `1.13.0-1~resolute1`.
-Nombre del archivo: `birdtray_1.13.0-1~resolute1_x11_amd64.deb`.
+Nombre del archivo: `birdtray_1.13.0-1.resolute1_x11_amd64.deb`.
 
 ### Limitación comprobada
 

@@ -19,7 +19,7 @@ Functional fixes are unchanged from the 1.12.0 edition tested on Kubuntu 26.04.
 This release changes version numbering and documentation, retaining monitor behavior.
 
 Debian version: `1.13.0-1~resolute1`.
-Package filename: `birdtray_1.13.0-1~resolute1_x11_amd64.deb`.
+Package filename: `birdtray_1.13.0-1.resolute1_x11_amd64.deb`.
 
 ### Observed limitation
 

@@ -17,13 +17,13 @@ Open this repository's [Releases](https://github.com/WonderSkydive/birdtray/rele
 page and download:
 
 ```text
-birdtray_1.13.0-1~resolute1_x11_amd64.deb
+birdtray_1.13.0-1.resolute1_x11_amd64.deb
 ```
 
 From the download directory:
 
 ```sh
-sudo apt install './birdtray_1.13.0-1~resolute1_x11_amd64.deb'
+sudo apt install './birdtray_1.13.0-1.resolute1_x11_amd64.deb'
 ```
 
 The package installs as `birdtray`, upgrades earlier versions of that package,

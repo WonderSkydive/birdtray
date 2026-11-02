@@ -40,7 +40,7 @@ temporary files and isolated configuration.
 
 ```sh
 python3 local-packaging/package.py build \
-  'birdtray_1.13.0-1~resolute1_x11_amd64.deb'
+  'birdtray_1.13.0-1.resolute1_x11_amd64.deb'
 ```
 
 The script stages files in a temporary directory, builds the Debian package

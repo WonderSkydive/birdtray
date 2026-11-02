@@ -16,13 +16,13 @@ Conserva la licencia GPLv3 y los créditos del proyecto original.
 En la sección **Releases** de este repositorio, descarga:
 
 ```text
-birdtray_1.13.0-1~resolute1_x11_amd64.deb
+birdtray_1.13.0-1.resolute1_x11_amd64.deb
 ```
 
 Desde la carpeta donde lo hayas descargado:
 
 ```sh
-sudo apt install './birdtray_1.13.0-1~resolute1_x11_amd64.deb'
+sudo apt install './birdtray_1.13.0-1.resolute1_x11_amd64.deb'
 ```
 
 Se instala como `birdtray`, actualiza las versiones anteriores de ese paquete y
