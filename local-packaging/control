@@ -1,0 +1,13 @@
+Package: birdtray
+Version: 1.13.0-1~resolute1
+Architecture: amd64
+Maintainer: Birdtray community build
+Section: mail
+Priority: optional
+Depends: libc6 (>= 2.34), libgcc-s1, libstdc++6 (>= 12), libqt5core5t64 (>= 5.15.18), libqt5gui5t64 (>= 5.15.18), libqt5network5t64 (>= 5.15.18), libqt5widgets5t64 (>= 5.15.18), libqt5svg5, libqt5x11extras5, libx11-6
+Suggests: thunderbird
+Homepage: https://github.com/WonderSkydive/birdtray
+Description: Thunderbird tray unread counter with X11 recovery fixes
+ Community modification based on Birdtray 1.11.4 for Ubuntu 26.04 amd64.
+ Restores lost index watches and bounds continuous-change read delays.
+ Uses the standard Birdtray executable and configuration paths.

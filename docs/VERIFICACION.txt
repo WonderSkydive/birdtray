@@ -1,0 +1,19 @@
+Test project <build>
+    Start 1: MailMorkParser.correctUnreadCount
+1/7 Test #1: MailMorkParser.correctUnreadCount .........   Passed    0.06 sec
+    Start 2: UtilsTest.formatGithubMarkdown_mentions
+2/7 Test #2: UtilsTest.formatGithubMarkdown_mentions ...   Passed    0.01 sec
+    Start 3: UtilsTest.formatGithubMarkdown_links
+3/7 Test #3: UtilsTest.formatGithubMarkdown_links ......   Passed    0.01 sec
+    Start 4: UtilsTest.orderedMapStorage
+4/7 Test #4: UtilsTest.orderedMapStorage ...............   Passed    0.01 sec
+    Start 5: UtilsTest.orderedMapOrder
+5/7 Test #5: UtilsTest.orderedMapOrder .................   Passed    0.01 sec
+    Start 6: UtilsTest.orderedMapClear
+6/7 Test #6: UtilsTest.orderedMapClear .................   Passed    0.01 sec
+    Start 7: monitor_recovery
+7/7 Test #7: monitor_recovery ..........................   Passed   31.61 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =  31.72 sec
