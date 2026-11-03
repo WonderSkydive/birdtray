@@ -1,15 +1,33 @@
-# Birdtray — Resolute / X11
+# Birdtray for Thunderbird — Resolute / X11
 
 **English** | [Español](README.es.md)
 
-Unread-mail system tray counter and Thunderbird window controls for
-**Ubuntu 26.04 Resolute, amd64, X11**.
+Birdtray brings Thunderbird to the Linux system tray: see your unread-mail count,
+hide and restore its window, and access mail actions without installing a
+Thunderbird extension.
+
+This edition is packaged for **Ubuntu 26.04 Resolute, amd64, X11**.
 
 **Tested on Kubuntu 26.04 with Plasma 6 and X11**, through several weeks of use.
 
 Community edition **1.13.0**, based on the source code of
 [Birdtray 1.11.4](https://github.com/gyunaev/birdtray/tree/v1.11.4).
 The original GPLv3 license and author credits are retained.
+
+## Features
+
+- Show the unread-mail count on the system tray icon.
+- Optionally blink or animate the icon while unread mail is present.
+- Snooze Birdtray's unread-mail indication for a chosen period.
+- Monitor selected mail folders and use different counter colors for them.
+- Hide and restore the Thunderbird window from the tray icon or its menu.
+- Optionally launch Thunderbird when Birdtray starts and close it when Birdtray exits.
+- Customize the tray icons and the counter's font and colors.
+- Monitor whether Thunderbird's window is present and indicate when it is closed.
+- Compose new mail from the tray menu, with optional predefined templates.
+
+Birdtray reads Thunderbird's local Mork (`.msf`) folder indexes directly, so it
+requires no Thunderbird extension.
 
 ## Download and install
 
@@ -34,7 +52,7 @@ Thunderbird when it exits, keep that behavior in mind.
 On a fresh installation, select the mail folders to monitor in Birdtray's
 settings. You can also configure tray actions to show and hide Thunderbird.
 
-## Fixes
+## Fixes in this edition
 
 - Restore watches on `.msf` indexes replaced or recreated by Thunderbird.
 - Periodically reread indexes: a configured interval of zero uses a 30-second

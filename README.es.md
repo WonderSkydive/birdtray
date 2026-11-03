@@ -1,15 +1,33 @@
 [English](README.md) | **Español**
 
-# Birdtray — Resolute / X11
+# Birdtray para Thunderbird — Resolute / X11
 
-Contador de correo sin leer en la bandeja del sistema y control de la ventana de
-Thunderbird para **Ubuntu 26.04 Resolute, amd64 y X11**.
+Birdtray lleva Thunderbird a la bandeja del sistema de Linux: consulta el contador
+de mensajes sin leer, oculta y restaura su ventana y accede a acciones de correo
+sin instalar ninguna extensión en Thunderbird.
+
+Esta edición está empaquetada para **Ubuntu 26.04 Resolute, amd64 y X11**.
 
 **Comprobado en Kubuntu 26.04 con Plasma 6 y X11**, mediante varias semanas de uso.
 
 Versión comunitaria **1.13.0**, basada en el código fuente de
 [Birdtray 1.11.4](https://github.com/gyunaev/birdtray/tree/v1.11.4).
 Conserva la licencia GPLv3 y los créditos del proyecto original.
+
+## Funciones
+
+- Mostrar el contador de mensajes sin leer en el icono de la bandeja.
+- Hacer parpadear o animar el icono mientras haya correo sin leer, opcionalmente.
+- Posponer la indicación de correo sin leer de Birdtray durante un tiempo elegido.
+- Supervisar las carpetas de correo seleccionadas y asignarles colores distintos.
+- Ocultar y restaurar la ventana de Thunderbird desde el icono o su menú.
+- Abrir Thunderbird al iniciar Birdtray y cerrarlo al salir, si se configura así.
+- Personalizar los iconos de la bandeja y la fuente y los colores del contador.
+- Detectar la presencia de la ventana de Thunderbird e indicar cuando está cerrada.
+- Redactar nuevos correos desde el menú, con plantillas predefinidas opcionales.
+
+Birdtray lee directamente los índices locales Mork (`.msf`) de las carpetas de
+Thunderbird, por lo que no necesita ninguna extensión de Thunderbird.
 
 ## Descargar e instalar
 
