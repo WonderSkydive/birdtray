@@ -14,6 +14,23 @@ Community edition **1.13.0**, based on the source code of
 [Birdtray 1.11.4](https://github.com/gyunaev/birdtray/tree/v1.11.4).
 The original GPLv3 license and author credits are retained.
 
+## Why this community edition?
+
+The Ubuntu 26.04 Resolute archive lists **Birdtray 1.9.0+ds-2.1**
+([package details](https://packages.ubuntu.com/resolute/birdtray); checked
+4 November 2026). This edition builds on the newer **upstream 1.11.4 source**
+and adds regression-tested fixes for unread-counter stalls caused by lost index
+watches or indefinitely delayed reads during continuous writes.
+
+| Version | Origin |
+| --- | --- |
+| 1.9.0+ds-2.1 | Package listed in the Ubuntu 26.04 archive |
+| 1.11.4 | Upstream source used as the base for this edition |
+| 1.13.0 | This community edition, including the additional monitoring fixes |
+
+Our version number identifies this community release; it is not a new official
+upstream release. The specific fixes are listed below.
+
 ## Features
 
 - Show the unread-mail count on the system tray icon.

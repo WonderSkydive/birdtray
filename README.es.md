@@ -14,6 +14,25 @@ Versión comunitaria **1.13.0**, basada en el código fuente de
 [Birdtray 1.11.4](https://github.com/gyunaev/birdtray/tree/v1.11.4).
 Conserva la licencia GPLv3 y los créditos del proyecto original.
 
+## ¿Por qué esta edición comunitaria?
+
+El archivo de Ubuntu 26.04 Resolute lista **Birdtray 1.9.0+ds-2.1**
+([ficha del paquete](https://packages.ubuntu.com/resolute/birdtray); comprobado
+el 4 de noviembre de 2026). Esta edición parte del **código fuente original
+1.11.4, más reciente**, y añade correcciones verificadas mediante pruebas de
+regresión para bloqueos del contador causados por pérdida de vigilancia de los
+índices o por lecturas aplazadas indefinidamente durante escrituras continuas.
+
+| Versión | Procedencia |
+| --- | --- |
+| 1.9.0+ds-2.1 | Paquete listado en el archivo de Ubuntu 26.04 |
+| 1.11.4 | Código fuente original usado como base de esta edición |
+| 1.13.0 | Esta edición comunitaria, con las correcciones adicionales del monitor |
+
+Nuestra numeración identifica esta publicación comunitaria; no es una nueva
+versión oficial del proyecto original. Las correcciones concretas se detallan
+más abajo.
+
 ## Funciones
 
 - Mostrar el contador de mensajes sin leer en el icono de la bandeja.
