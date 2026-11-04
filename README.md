@@ -16,6 +16,8 @@ The original GPLv3 license and author credits are retained.
 
 ## Why this community edition?
 
+**An updated community alternative to the Birdtray 1.9.0+ds-2.1 package distributed by Ubuntu. Built on the original 1.11.4 source, it includes additional fixes to prevent unread-mail counter stalls.**
+
 The Ubuntu 26.04 Resolute archive lists **Birdtray 1.9.0+ds-2.1**
 ([package details](https://packages.ubuntu.com/resolute/birdtray); checked
 4 November 2026). This edition builds on the newer **upstream 1.11.4 source**

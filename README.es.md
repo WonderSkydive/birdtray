@@ -16,6 +16,8 @@ Conserva la licencia GPLv3 y los créditos del proyecto original.
 
 ## ¿Por qué esta edición comunitaria?
 
+**Edición comunitaria actualizada frente al paquete Birdtray 1.9.0+ds-2.1 distribuido por Ubuntu. Utiliza como base el código original 1.11.4 e incorpora correcciones adicionales para evitar bloqueos del contador de mensajes sin leer.**
+
 El archivo de Ubuntu 26.04 Resolute lista **Birdtray 1.9.0+ds-2.1**
 ([ficha del paquete](https://packages.ubuntu.com/resolute/birdtray); comprobado
 el 4 de noviembre de 2026). Esta edición parte del **código fuente original
