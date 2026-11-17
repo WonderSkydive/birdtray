@@ -12,6 +12,10 @@ Birdtray shows Thunderbird's unread mail count in the system tray and lets you h
 - Optionally start Thunderbird with Birdtray, reopen it from the tray, or close it when Birdtray exits.
 - Customize the tray icon and create messages from email templates.
 
+## Screenshot
+
+![Birdtray preferences on KDE Plasma](screenshots/birdtray-settings.png)
+
 ## Download and install
 
 The **1.14.0** package targets **Ubuntu 26.04 Resolute (amd64)** and was tested on Kubuntu 26.04 with Plasma 6 in X11 and Wayland sessions. Download the Debian package from [Releases](https://github.com/WonderSkydive/birdtray/releases/latest). The current package revision is `1.14.0-3.resolute1`.
@@ -25,7 +29,7 @@ The **1.14.0** package targets **Ubuntu 26.04 Resolute (amd64)** and was tested 
    sudo apt install ./birdtray_1.14.0-3.resolute1_amd64.deb
    ```
 
-3. Launch **Birdtray**. In **Birdtray → Preferences → Advanced**, check that **Thunderbird command line** points to your Thunderbird executable. Change it if Thunderbird is installed elsewhere. Then use **Birdtray → Preferences → Monitor** to select the folders you want to track.
+3. Launch **Birdtray** from the application menu. Right-click its system tray icon and select **Preferences**. In Birdtray’s **Advanced** tab, check that **Thunderbird command line** points to your Thunderbird executable. Change it if Thunderbird is installed elsewhere. Then use **Birdtray → Preferences → Monitor** to select the folders you want to track.
 4. In the **Hide** tab, choose whether the tray icon should hide or restore Thunderbird and whether to hide its window when minimized.
 
 ### Updating an existing installation

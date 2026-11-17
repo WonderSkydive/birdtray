@@ -12,6 +12,10 @@ Birdtray muestra los mensajes sin leer de Thunderbird en la bandeja del sistema 
 - Puede iniciar Thunderbird junto con Birdtray, reabrirlo desde la bandeja o cerrarlo al salir de Birdtray.
 - Permite personalizar el icono y redactar mensajes a partir de plantillas.
 
+## Captura de pantalla
+
+![Preferencias de Birdtray en KDE Plasma](screenshots/birdtray-settings.png)
+
 ## Descarga e instalación
 
 El paquete **1.14.0** está destinado a **Ubuntu 26.04 Resolute (amd64)** y se probó en Kubuntu 26.04 con Plasma 6 en sesiones X11 y Wayland. Descarga el paquete Debian desde [Publicaciones](https://github.com/WonderSkydive/birdtray/releases/latest). La revisión actual del paquete es `1.14.0-3.resolute1`.
@@ -25,7 +29,7 @@ El paquete **1.14.0** está destinado a **Ubuntu 26.04 Resolute (amd64)** y se p
    sudo apt install ./birdtray_1.14.0-3.resolute1_amd64.deb
    ```
 
-3. Abre **Birdtray**. En **Birdtray → Preferencias → Avanzado**, comprueba que **Línea de comando de Thunderbird** apunta al ejecutable. Cámbiala si Thunderbird está instalado en otra ubicación. Después, en **Birdtray → Preferencias → Supervisar**, selecciona las carpetas de Thunderbird que quieras vigilar.
+3. Inicia **Birdtray** desde el menú de aplicaciones. Haz clic derecho sobre su icono en la bandeja del sistema y selecciona **Preferencias**. En la pestaña **Avanzado** de Birdtray, comprueba que **Línea de comando de Thunderbird** apunta al ejecutable. Cámbiala si Thunderbird está instalado en otra ubicación. Después, en **Birdtray → Preferencias → Supervisar**, selecciona las carpetas de Thunderbird que quieras vigilar.
 4. En la pestaña **Ocultar**, elige si el icono de la bandeja debe ocultar o restaurar Thunderbird y si quieres ocultar su ventana al minimizarla.
 
 ### Actualizar una instalación existente
