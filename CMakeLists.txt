@@ -204,42 +204,7 @@ if(BUILD_WITH_TESTS)
 endif()
 
 # Installation
-if(WIN32)
-    if(POLICY CMP0087)
-        cmake_policy(SET CMP0087 NEW)
-    endif()
 
-    option(DONT_EXECUTE_INSTALLER "Only create the Windows installer but don't execute it" OFF)
-    set(INSTALL_ARG --install)
-    if (DONT_EXECUTE_INSTALLER)
-        set(INSTALL_ARG)
-    endif()
-
-    # Find ssl libraries
-    find_package(OpenSSL QUIET)
-    get_filename_component(SSL_LIB_DIR "${OPENSSL_SSL_LIBRARY}" DIRECTORY)
-    # Sometimes, the .lib files are in a lib directory and the .dll files are in the parent directory
-    get_filename_component(SSL_PARENT_DIR "${SSL_LIB_DIR}" DIRECTORY)
-    find_library(SSL_LIB_PATH ssl PATHS "${SSL_LIB_DIR}" "${SSL_PARENT_DIR}")
-    get_filename_component(SSL_PATH "${SSL_LIB_PATH}" DIRECTORY)
-    if(SSL_PATH)
-        STRING(REGEX REPLACE "/" "\\\\\\\\" SSL_PATH ${SSL_PATH})
-    else()
-        set(SSL_PATH "C:\\\\Program Files\\\\OpenSSL")
-    endif()
-
-    # Create installer
-    install(CODE "if(NOT POLICY CMP0087)
-            message(FATAL_ERROR \"The install target requires cmake 3.14 or newer\")
-        endif()
-        execute_process(
-        COMMAND cmd /C buildInstaller.bat \"$<TARGET_FILE:birdtray>\" \"${SSL_PATH}\" ${INSTALL_ARG}
-        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/installer
-        RESULT_VARIABLE INSTALL_RESULT)
-        if(NOT \${INSTALL_RESULT} EQUAL \"0\")
-            message(FATAL_ERROR \"Install command failed with exit code \${INSTALL_RESULT}\")
-        endif()")
-else()
     include(GNUInstallDirs)
     install(TARGETS birdtray RUNTIME DESTINATION bin)
     install(FILES src/res/com.ulduzsoft.Birdtray.desktop
@@ -257,7 +222,7 @@ else()
         install(DIRECTORY ${CMAKE_BINARY_DIR}/translations
                 DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/ulduzsoft/birdtray)
     endif()
-endif()
+
 
 if(Qt5LinguistTools_FOUND)
     add_custom_target(clean_translations COMMENT "Remove obsolete translation entries")
