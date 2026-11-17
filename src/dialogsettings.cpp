@@ -140,7 +140,7 @@ DialogSettings::DialogSettings( QWidget *parent)
                  tr("Credits and license"),
                  tr("Original Birdtray project"),
                  tr("Community edition maintained by WonderSkydive."),
-                 tr("If you would like to support the maintenance of this community edition, you can contribute here:"),
+                 tr("If you would like to support the work already done and the maintenance of this community edition, you can contribute here:"),
                  tr("Birdtray is free software and may be used for any purpose, including commercial use.")));
 
     // Icon
@@ -370,7 +370,7 @@ void DialogSettings::onTranslatorsDialog() {
     translatorsListFile.close();
     translatorsList.replace("# Active maintainers", "# " + tr("Active maintainers"))
                    .replace("# Contributors", "# " + tr("Contributors"));
-    translatorsList += QStringLiteral("\n\n# %1\n\n- [@WonderSkydive](https://github.com/WonderSkydive)\n")
+    translatorsList += QStringLiteral("\n\n# %1\n\n- @WonderSkydive\n")
                            .arg(tr("Community edition"));
     QDialog translatorsDialog;
     translatorsDialog.resize(400, 300);

@@ -1,4 +1,4 @@
-# Birdtray para Thunderbird
+# Birdtray para Thunderbird — X11 y Plasma Wayland
 
 [English](README.md)
 
@@ -14,18 +14,18 @@ Birdtray muestra los mensajes sin leer de Thunderbird en la bandeja del sistema 
 
 ## Descarga e instalación
 
-El paquete **1.14.0** está destinado a **Kubuntu 26.04 Resolute (amd64)**. El control de ventanas se probó en X11 y en KDE Plasma 6 con Wayland. Descarga el paquete Debian desde [Publicaciones](https://github.com/WonderSkydive/birdtray/releases/latest). La revisión actual del paquete es `1.14.0-2.resolute1`.
+El paquete **1.14.0** está destinado a **Ubuntu 26.04 Resolute (amd64)** y se probó en Kubuntu 26.04 con Plasma 6 en sesiones X11 y Wayland. Descarga el paquete Debian desde [Publicaciones](https://github.com/WonderSkydive/birdtray/releases/latest). La revisión actual del paquete es `1.14.0-3.resolute1`.
 
 ### Primera instalación
 
 1. Instala Thunderbird si aún no lo tienes. Ábrelo y deja que sincronice al menos una vez para que Birdtray encuentre los índices de las carpetas.
-2. Abre el archivo `Birdtray.deb` con Discover y pulsa **Instalar**. Si prefieres usar la terminal, ejecuta desde la carpeta de descargas:
+2. Abre el archivo `birdtray_1.14.0-3.resolute1_amd64.deb` con Discover y pulsa **Instalar**. Si prefieres usar la terminal, ejecuta desde la carpeta de descargas:
 
    ```sh
-   sudo apt install ./Birdtray.deb
+   sudo apt install ./birdtray_1.14.0-3.resolute1_amd64.deb
    ```
 
-3. Abre **Birdtray** desde el menú de aplicaciones. En **Preferencias → Supervisar**, selecciona las carpetas de Thunderbird que quieras vigilar.
+3. Abre **Birdtray**. En **Birdtray → Preferencias → Avanzado**, comprueba que **Línea de comando de Thunderbird** apunta al ejecutable. Cámbiala si Thunderbird está instalado en otra ubicación. Después, en **Birdtray → Preferencias → Supervisar**, selecciona las carpetas de Thunderbird que quieras vigilar.
 4. En la pestaña **Ocultar**, elige si el icono de la bandeja debe ocultar o restaurar Thunderbird y si quieres ocultar su ventana al minimizarla.
 
 ### Actualizar una instalación existente
@@ -44,4 +44,6 @@ Consulta [Compilar Birdtray](BUILD.es.md) para compilar, ejecutar las pruebas y 
 
 WonderSkydive mantiene esta edición comunitaria, desarrollada a partir de [Birdtray 1.11.4](https://github.com/gyunaev/birdtray/tree/v1.11.4). La integración con KWin se inspiró en [stark1tty/birdtray-wayland](https://github.com/stark1tty/birdtray-wayland). Consulta los [créditos](CREDITS.md) y la [licencia GPLv3](LICENSE.txt).
 
-[Support WonderSkydive](https://www.paypal.com/ncp/payment/KWEHYT4HDTARE)
+## Apoyo al proyecto
+
+Si quieres apoyar el trabajo realizado y el mantenimiento de esta edición comunitaria, puedes hacerlo aquí: [Support WonderSkydive](https://www.paypal.com/ncp/payment/KWEHYT4HDTARE)

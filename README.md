@@ -1,4 +1,4 @@
-# Birdtray for Thunderbird
+# Birdtray for Thunderbird — X11 and Plasma Wayland
 
 [Español](README.es.md)
 
@@ -14,18 +14,18 @@ Birdtray shows Thunderbird's unread mail count in the system tray and lets you h
 
 ## Download and install
 
-The **1.14.0** package targets **Kubuntu 26.04 Resolute (amd64)**. The window controls were tested on X11 and KDE Plasma 6 Wayland. Download the Debian package from [Releases](https://github.com/WonderSkydive/birdtray/releases/latest). The current package revision is `1.14.0-2.resolute1`.
+The **1.14.0** package targets **Ubuntu 26.04 Resolute (amd64)** and was tested on Kubuntu 26.04 with Plasma 6 in X11 and Wayland sessions. Download the Debian package from [Releases](https://github.com/WonderSkydive/birdtray/releases/latest). The current package revision is `1.14.0-3.resolute1`.
 
 ### First installation
 
 1. Install Thunderbird first if you do not already have it. Open it and let it sync at least once so Birdtray can find its folder indexes.
-2. Open the downloaded `Birdtray.deb` in Discover and select **Install**. For a terminal installation, run this from the download directory:
+2. Open the downloaded `birdtray_1.14.0-3.resolute1_amd64.deb` in Discover and select **Install**. For a terminal installation, run this from the download directory:
 
    ```sh
-   sudo apt install ./Birdtray.deb
+   sudo apt install ./birdtray_1.14.0-3.resolute1_amd64.deb
    ```
 
-3. Launch **Birdtray** from the application menu. Open **Preferences → Monitor** and select the Thunderbird folders you want to track.
+3. Launch **Birdtray**. In **Birdtray → Preferences → Advanced**, check that **Thunderbird command line** points to your Thunderbird executable. Change it if Thunderbird is installed elsewhere. Then use **Birdtray → Preferences → Monitor** to select the folders you want to track.
 4. In the **Hide** tab, choose whether the tray icon should hide or restore Thunderbird and whether to hide its window when minimized.
 
 ### Updating an existing installation
@@ -44,4 +44,6 @@ See [Building Birdtray](BUILD.md) for build, test, and packaging instructions. F
 
 This community edition is maintained by WonderSkydive and builds on [Birdtray 1.11.4](https://github.com/gyunaev/birdtray/tree/v1.11.4). The KWin integration was inspired by [stark1tty/birdtray-wayland](https://github.com/stark1tty/birdtray-wayland). See [credits](CREDITS.md) and the [GPLv3 license](LICENSE.txt).
 
-[Support WonderSkydive](https://www.paypal.com/ncp/payment/KWEHYT4HDTARE)
+## Support the project
+
+If you would like to support the work already done and the maintenance of this community edition, you can contribute here: [Support WonderSkydive](https://www.paypal.com/ncp/payment/KWEHYT4HDTARE)

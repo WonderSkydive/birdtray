@@ -548,8 +548,8 @@ p, li { white-space: pre-wrap; }
         <translation>Edición comunitaria</translation>
     </message>
     <message>
-        <source>If you would like to support the maintenance of this community edition, you can contribute here:</source>
-        <translation>Si quieres apoyar el mantenimiento de esta edición comunitaria, puedes hacerlo aquí:</translation>
+        <source>If you would like to support the work already done and the maintenance of this community edition, you can contribute here:</source>
+        <translation>Si quieres apoyar el trabajo realizado y el mantenimiento de esta edición comunitaria, puedes hacerlo aquí:</translation>
     </message>
     <message>
         <source>Birdtray is free software and may be used for any purpose, including commercial use.</source>
