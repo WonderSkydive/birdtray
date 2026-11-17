@@ -1,3 +1,6 @@
+# Historical recipe for upstream Birdtray 1.9.0.
+# The community edition distributes a Debian package. See BUILD.md.
+
 Name:         birdtray
 Version:      1.9.0
 Release:      1%{?dist}
