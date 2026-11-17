@@ -14,13 +14,23 @@ Birdtray shows Thunderbird's unread mail count in the system tray and lets you h
 
 ## Download and install
 
-The **1.14.0** Debian package targets **Kubuntu 26.04 Resolute (amd64)**. The 1.14 window integration was tested on X11 and Plasma 6 Wayland. Download it from [Releases](https://github.com/WonderSkydive/birdtray/releases/latest), close Birdtray if it is running, then open the file in Discover or run:
+The **1.14.0** package targets **Kubuntu 26.04 Resolute (amd64)**. The window controls were tested on X11 and KDE Plasma 6 Wayland. Download the Debian package from [Releases](https://github.com/WonderSkydive/birdtray/releases/latest). The current package revision is `1.14.0-2.resolute1`.
 
-```sh
-sudo apt install ./birdtray_1.14.0-1.resolute1_amd64.deb
-```
+### First installation
 
-The package upgrades an existing `birdtray` installation and uses its saved preferences. Launch Birdtray from the application menu and choose the Thunderbird folders in **Preferences → Monitor**.
+1. Install Thunderbird first if you do not already have it. Open it and let it sync at least once so Birdtray can find its folder indexes.
+2. Open the downloaded `Birdtray.deb` in Discover and select **Install**. For a terminal installation, run this from the download directory:
+
+   ```sh
+   sudo apt install ./Birdtray.deb
+   ```
+
+3. Launch **Birdtray** from the application menu. Open **Preferences → Monitor** and select the Thunderbird folders you want to track.
+4. In the **Hide** tab, choose whether the tray icon should hide or restore Thunderbird and whether to hide its window when minimized.
+
+### Updating an existing installation
+
+Quit Birdtray from the tray menu if it is running. If you enabled the option to close Thunderbird on exit, this will close Thunderbird too. Install the new package using Discover or the command above, then reopen Birdtray. The package reuses your existing preferences.
 
 ## What's new in 1.14.0
 

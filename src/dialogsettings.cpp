@@ -130,8 +130,8 @@ DialogSettings::DialogSettings( QWidget *parent)
                        "<h4>%5</h4><p>Copyright (C) 2018 George Yunaev "
                        "(&lt;<a href='mailto:gyunaev@ulduzsoft.com'>gyunaev@ulduzsoft.com</a>&gt;). "
                        "<a href='https://github.com/gyunaev/birdtray'>%6</a>.</p>"
-                       "<p>%7 <a href='https://www.gnu.org/licenses/gpl-3.0.html'>GPLv3</a>.</p>"
-                       "<p><a href='https://www.paypal.com/ncp/payment/KWEHYT4HDTARE'>"
+                       "<p>%7 <a href='https://www.gnu.org/licenses/gpl-3.0.html'>GPLv3</a>. %9</p>"
+                       "<p>%8 <a href='https://www.paypal.com/ncp/payment/KWEHYT4HDTARE'>"
                        "Support WonderSkydive</a></p>")
             .arg(tr("Birdtray %1 — Resolute / X11 and Plasma Wayland").arg(Utils::getBirdtrayVersion()),
                  tr("Community edition with unread-mail monitoring and window controls for Thunderbird."),
@@ -139,7 +139,9 @@ DialogSettings::DialogSettings( QWidget *parent)
                  tr("Help and bug reports for this edition"),
                  tr("Credits and license"),
                  tr("Original Birdtray project"),
-                 tr("Community edition maintained by WonderSkydive.")));
+                 tr("Community edition maintained by WonderSkydive."),
+                 tr("If you would like to support the maintenance of this community edition, you can contribute here:"),
+                 tr("Birdtray is free software and may be used for any purpose, including commercial use.")));
 
     // Icon
     btnNotificationIcon->setIcon( settings->getNotificationIcon() );
@@ -368,8 +370,8 @@ void DialogSettings::onTranslatorsDialog() {
     translatorsListFile.close();
     translatorsList.replace("# Active maintainers", "# " + tr("Active maintainers"))
                    .replace("# Contributors", "# " + tr("Contributors"));
-    translatorsList += QStringLiteral("\n\n# %1\n\n[%2](https://github.com/WonderSkydive/birdtray)\n")
-                           .arg(tr("Community edition"), tr("Project for this community edition"));
+    translatorsList += QStringLiteral("\n\n# %1\n\n- [@WonderSkydive](https://github.com/WonderSkydive)\n")
+                           .arg(tr("Community edition"));
     QDialog translatorsDialog;
     translatorsDialog.resize(400, 300);
     translatorsDialog.setWindowTitle(tr("Translators"));

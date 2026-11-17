@@ -39,7 +39,7 @@ La prueba del monitor utiliza archivos temporales y configuración aislada.
 
 ```sh
 python3 local-packaging/package.py build \
-  'birdtray_1.14.0-1.resolute1_amd64.deb'
+  'birdtray_1.14.0-2.resolute1_amd64.deb'
 ```
 
 El script prepara un directorio temporal, genera el paquete con `dpkg-deb` y

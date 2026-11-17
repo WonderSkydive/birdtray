@@ -14,13 +14,23 @@ Birdtray muestra los mensajes sin leer de Thunderbird en la bandeja del sistema 
 
 ## Descarga e instalación
 
-El paquete Debian **1.14.0** está destinado a **Kubuntu 26.04 Resolute (amd64)**. La integración de ventanas de la 1.14 se probó en X11 y en Plasma 6 con Wayland. Descárgalo desde [Publicaciones](https://github.com/WonderSkydive/birdtray/releases/latest), cierra Birdtray si está abierto y abre el archivo con Discover o ejecuta:
+El paquete **1.14.0** está destinado a **Kubuntu 26.04 Resolute (amd64)**. El control de ventanas se probó en X11 y en KDE Plasma 6 con Wayland. Descarga el paquete Debian desde [Publicaciones](https://github.com/WonderSkydive/birdtray/releases/latest). La revisión actual del paquete es `1.14.0-2.resolute1`.
 
-```sh
-sudo apt install ./birdtray_1.14.0-1.resolute1_amd64.deb
-```
+### Primera instalación
 
-El paquete actualiza la instalación de `birdtray` y reutiliza sus preferencias. Abre Birdtray desde el menú de aplicaciones y elige las carpetas de Thunderbird en **Preferencias → Supervisar**.
+1. Instala Thunderbird si aún no lo tienes. Ábrelo y deja que sincronice al menos una vez para que Birdtray encuentre los índices de las carpetas.
+2. Abre el archivo `Birdtray.deb` con Discover y pulsa **Instalar**. Si prefieres usar la terminal, ejecuta desde la carpeta de descargas:
+
+   ```sh
+   sudo apt install ./Birdtray.deb
+   ```
+
+3. Abre **Birdtray** desde el menú de aplicaciones. En **Preferencias → Supervisar**, selecciona las carpetas de Thunderbird que quieras vigilar.
+4. En la pestaña **Ocultar**, elige si el icono de la bandeja debe ocultar o restaurar Thunderbird y si quieres ocultar su ventana al minimizarla.
+
+### Actualizar una instalación existente
+
+Si Birdtray está abierto, ciérralo desde el menú de la bandeja. Si activaste el cierre de Thunderbird al salir, también se cerrará Thunderbird. Instala el nuevo paquete con Discover o con el comando anterior y vuelve a abrir Birdtray. Se reutilizarán tus preferencias.
 
 ## Novedades de la 1.14.0
 

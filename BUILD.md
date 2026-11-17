@@ -29,7 +29,7 @@ node tests/kwin/test-window-actions.js
 Generate the Debian package locally:
 
 ```sh
-python3 local-packaging/package.py build birdtray_1.14.0-1.resolute1_amd64.deb
+python3 local-packaging/package.py build birdtray_1.14.0-2.resolute1_amd64.deb
 ```
 
 The packaging script stages the files in a temporary directory and runs
