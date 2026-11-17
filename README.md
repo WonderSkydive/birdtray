@@ -1,121 +1,37 @@
-# Birdtray for Thunderbird — Resolute / X11
+# Birdtray for Thunderbird
 
-**English** | [Español](README.es.md)
+[Español](README.es.md)
 
-Birdtray brings Thunderbird to the Linux system tray: see your unread-mail count,
-hide and restore its window, and access mail actions without installing a
-Thunderbird extension.
-
-This edition is packaged for **Ubuntu 26.04 Resolute, amd64, X11**.
-
-**Tested on Kubuntu 26.04 with Plasma 6 and X11**, through several weeks of use.
-
-Community edition **1.13.0**, based on the source code of
-[Birdtray 1.11.4](https://github.com/gyunaev/birdtray/tree/v1.11.4).
-The original GPLv3 license and author credits are retained.
-
-## Why this community edition?
-
-**An updated community alternative to the Birdtray 1.9.0+ds-2.1 package distributed by Ubuntu. Built on the original 1.11.4 source, it includes additional fixes to prevent unread-mail counter stalls.**
-
-The Ubuntu 26.04 Resolute archive lists **Birdtray 1.9.0+ds-2.1**
-([package details](https://packages.ubuntu.com/resolute/birdtray); checked
-4 November 2026). This edition builds on the newer **upstream 1.11.4 source**
-and adds regression-tested fixes for unread-counter stalls caused by lost index
-watches or indefinitely delayed reads during continuous writes.
-
-| Version | Origin |
-| --- | --- |
-| 1.9.0+ds-2.1 | Package listed in the Ubuntu 26.04 archive |
-| 1.11.4 | Upstream source used as the base for this edition |
-| 1.13.0 | This community edition, including the additional monitoring fixes |
-
-Our version number identifies this community release; it is not a new official
-upstream release. The specific fixes are listed below.
+Birdtray shows Thunderbird's unread mail count in the system tray and lets you hide or restore its window. This community edition runs on **X11 and KDE Plasma Wayland** without a Thunderbird extension.
 
 ## Features
 
-- Show the unread-mail count on the system tray icon.
-- Optionally blink or animate the icon while unread mail is present.
-- Snooze Birdtray's unread-mail indication for a chosen period.
-- Monitor selected mail folders and use different counter colors for them.
-- Hide and restore the Thunderbird window from the tray icon or its menu.
-- Optionally launch Thunderbird when Birdtray starts and close it when Birdtray exits.
-- Customize the tray icons and the counter's font and colors.
-- Monitor whether Thunderbird's window is present and indicate when it is closed.
-- Compose new mail from the tray menu, with optional predefined templates.
-
-Birdtray reads Thunderbird's local Mork (`.msf`) folder indexes directly, so it
-requires no Thunderbird extension.
+- Monitor selected mail folders and use different counter colors for different accounts.
+- Animate the tray icon for new mail or snooze notifications.
+- Hide or restore Thunderbird from the tray, including automatically hiding a minimized window.
+- Optionally start Thunderbird with Birdtray, reopen it from the tray, or close it when Birdtray exits.
+- Customize the tray icon and create messages from email templates.
 
 ## Download and install
 
-Open this repository's [Releases](https://github.com/WonderSkydive/birdtray/releases)
-page and download:
-
-```text
-birdtray_1.13.0-1.resolute1_x11_amd64.deb
-```
-
-From the download directory:
+The **1.14.0** Debian package targets **Kubuntu 26.04 Resolute (amd64)**. The 1.14 window integration was tested on X11 and Plasma 6 Wayland. Download it from [Releases](https://github.com/WonderSkydive/birdtray/releases/latest), close Birdtray if it is running, then open the file in Discover or run:
 
 ```sh
-sudo apt install './birdtray_1.13.0-1.resolute1_x11_amd64.deb'
+sudo apt install ./birdtray_1.14.0-1.resolute1_amd64.deb
 ```
 
-The package installs as `birdtray`, upgrades earlier versions of that package,
-and retains the usual configuration. Quit Birdtray before upgrading, then open
-it again from your application menu. If Birdtray is configured to close
-Thunderbird when it exits, keep that behavior in mind.
+The package upgrades an existing `birdtray` installation and uses its saved preferences. Launch Birdtray from the application menu and choose the Thunderbird folders in **Preferences → Monitor**.
 
-On a fresh installation, select the mail folders to monitor in Birdtray's
-settings. You can also configure tray actions to show and hide Thunderbird.
+## What's new in 1.14.0
 
-## Fixes in this edition
+Window controls on Plasma Wayland use KWin. X11 remains supported, and both sessions use the unread counter with the index-monitoring recovery introduced in the community edition. This release also updates English and Spanish interface text and packaging metadata.
 
-- Restore watches on `.msf` indexes replaced or recreated by Thunderbird.
-- Periodically reread indexes: a configured interval of zero uses a 30-second
-  recovery scan.
-- Bound the read delay during continuous index writes.
-- Keep the file watcher in the monitoring thread and stop timers in that thread
-  before it exits.
-- Remove paths no longer configured and prevent interval-conversion overflow.
+## Build and support
 
-The application-menu launcher selects the X11 backend. This edition uses
-Ubuntu 26.04's Qt 5.15.18 libraries and can run on Plasma 6.
-
-## Counter after suspend or hibernate
-
-Birdtray reads the counter stored in each folder's local Thunderbird index.
-In an investigated case, Thunderbird displayed zero while its index still
-stored four. Opening the folder updated the index to zero, which Birdtray
-reflected immediately.
-
-If this discrepancy occurs, opening the folder in Thunderbird may refresh its
-index. Birdtray's periodic reads reflect the value available on disk.
-
-## Uninstall
-
-```sh
-sudo apt remove birdtray
-```
-
-Package files are removed; personal settings are retained. You can subsequently
-install another version. Shared dependencies follow normal APT behavior.
-
-## Build and verify
-
-See [BUILD.md](BUILD.md) ([Español](BUILD.es.md)). The package adds no services,
-autostart entries, or maintainer scripts that launch or stop applications.
-
-All seven automated tests pass. They cover the parser and its fixtures,
-utilities, and monitor recovery after index replacement, deletion, recreation,
-continuous writes, and periodic recovery.
+See [Building Birdtray](BUILD.md) for build, test, and packaging instructions. For help, use [Discussions](https://github.com/WonderSkydive/birdtray/discussions). Report reproducible bugs in [Issues](https://github.com/WonderSkydive/birdtray/issues), including your desktop session and Thunderbird version.
 
 ## Credits and license
 
-Original project: [gyunaev/birdtray](https://github.com/gyunaev/birdtray).
-See [CREDITS.md](CREDITS.md), [CHANGELOG.md](CHANGELOG.md)
-([Español](CHANGELOG.es.md)), and [LICENSE.txt](LICENSE.txt).
-Original author and translator credits are retained. Version 1.13.0 identifies
-this community modification, rather than an upstream release.
+This community edition is maintained by WonderSkydive and builds on [Birdtray 1.11.4](https://github.com/gyunaev/birdtray/tree/v1.11.4). The KWin integration was inspired by [stark1tty/birdtray-wayland](https://github.com/stark1tty/birdtray-wayland). See [credits](CREDITS.md) and the [GPLv3 license](LICENSE.txt).
+
+[Support WonderSkydive](https://www.paypal.com/ncp/payment/KWEHYT4HDTARE)

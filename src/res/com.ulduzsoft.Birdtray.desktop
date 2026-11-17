@@ -22,7 +22,7 @@ Keywords[sk]=Email;E-mail;Elektronická pošta;Diskusné skupiny;Čítačka kan�
 Keywords[uk]=Email;E-mail;Newsgroup;Feed;RSS;пошта;новини;подачі;стрічка
 Keywords[vi]=Mail;E-Mail;Email;Newsgroup;Feed;RSS;Thư điện tử;Gửi thư
 Keywords[zh_CN]=Mail;E-Mail;Email;Newsgroup;Feed;RSS;电子;邮件;新闻;Thunderbird;tb;雷鸟;电邮;邮箱;阅读器;
-Exec=env QT_QPA_PLATFORM=xcb birdtray
+Exec=birdtray
 Terminal=false
 X-MultipleArgs=false
 Type=Application

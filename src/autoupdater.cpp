@@ -17,8 +17,8 @@
 #include <QtCore/QProcess>
 #include <QtGui/QDesktopServices>
 
-#define LATEST_VERSION_INFO_URL "https://api.github.com/repos/gyunaev/birdtray/releases/latest"
-#define GENERIC_DOWNLOAD_URL "https://github.com/gyunaev/birdtray/releases/latest"
+#define LATEST_VERSION_INFO_URL "https://api.github.com/repos/WonderSkydive/birdtray/releases/latest"
+#define GENERIC_DOWNLOAD_URL "https://github.com/WonderSkydive/birdtray/releases/latest"
 #define VERSION_TAG_REGEX R"(^v(?<major>\d+)\.(?<minor>\d+)(\.(?<patch>\d+))?$)"
 
 AutoUpdater::AutoUpdater(QObject* parent) :

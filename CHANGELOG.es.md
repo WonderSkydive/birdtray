@@ -2,6 +2,11 @@
 
 # Cambios
 
+## 1.14.0 — Resolute — 2026-11-17
+
+- Añade el control de ventanas de Thunderbird en KDE Plasma Wayland y conserva X11.
+- Actualiza los textos en inglés y español, los enlaces de ayuda y los metadatos del paquete.
+
 ## 1.13.0 — Resolute / X11 — 2026-11-02
 
 Publicación comunitaria basada en Birdtray v1.11.4, commit `7261ff0`.

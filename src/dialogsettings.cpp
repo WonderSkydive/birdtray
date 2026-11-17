@@ -124,16 +124,22 @@ DialogSettings::DialogSettings( QWidget *parent)
     treeNewEmails->setModel( mModelNewEmails );
     treeNewEmails->setCurrentIndex(mModelNewEmails->index(0, 0));
     
-    // Create the "About" box
-    QString origabout = browserAbout->toHtml();
-    origabout.replace( "[VERSION]", Utils::getBirdtrayVersion() +
-        " — Resolute / X11 — Community version" );
-    origabout.replace("</body>",
-        "<p>Community modification based on Birdtray 1.11.4. "
-        "Not an official upstream release. GPLv3; original credits retained.</p></body>");
-    origabout.replace( "[DATE]", QString("%1 %2").arg(__DATE__) .arg(__TIME__) );
-    origabout.replace( "[QT_VERSION]", QT_VERSION_STR );
-    browserAbout->setText( origabout );
+    browserAbout->setHtml(
+        QStringLiteral("<h3>%1</h3><p>%2</p><p>%3</p>"
+                       "<p><a href='https://github.com/WonderSkydive/birdtray'>%4</a></p>"
+                       "<h4>%5</h4><p>Copyright (C) 2018 George Yunaev "
+                       "(&lt;<a href='mailto:gyunaev@ulduzsoft.com'>gyunaev@ulduzsoft.com</a>&gt;). "
+                       "<a href='https://github.com/gyunaev/birdtray'>%6</a>.</p>"
+                       "<p>%7 <a href='https://www.gnu.org/licenses/gpl-3.0.html'>GPLv3</a>.</p>"
+                       "<p><a href='https://www.paypal.com/ncp/payment/KWEHYT4HDTARE'>"
+                       "Support WonderSkydive</a></p>")
+            .arg(tr("Birdtray %1 — Resolute / X11 and Plasma Wayland").arg(Utils::getBirdtrayVersion()),
+                 tr("Community edition with unread-mail monitoring and window controls for Thunderbird."),
+                 tr("Built on %1 with Qt %2.").arg(QStringLiteral(__DATE__), QStringLiteral(QT_VERSION_STR)),
+                 tr("Help and bug reports for this edition"),
+                 tr("Credits and license"),
+                 tr("Original Birdtray project"),
+                 tr("Community edition maintained by WonderSkydive.")));
 
     // Icon
     btnNotificationIcon->setIcon( settings->getNotificationIcon() );
@@ -362,6 +368,8 @@ void DialogSettings::onTranslatorsDialog() {
     translatorsListFile.close();
     translatorsList.replace("# Active maintainers", "# " + tr("Active maintainers"))
                    .replace("# Contributors", "# " + tr("Contributors"));
+    translatorsList += QStringLiteral("\n\n# %1\n\n[%2](https://github.com/WonderSkydive/birdtray)\n")
+                           .arg(tr("Community edition"), tr("Project for this community edition"));
     QDialog translatorsDialog;
     translatorsDialog.resize(400, 300);
     translatorsDialog.setWindowTitle(tr("Translators"));
@@ -420,8 +428,7 @@ void DialogSettings::changeIcon(QToolButton *button)
         }
         if (Utils::pixmapToString(icon).isEmpty()) {
             QMessageBox::critical(nullptr, tr("Invalid icon"),
-                    tr("Could not load the icon from this file. Try loading the icon in an image "
-                       "editing tool and saving it in a different format."));
+                    tr("Could not load the icon from this file. Try saving the image in a different format."));
             return;
         }
         // Force scale icon to the expected size

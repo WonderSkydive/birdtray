@@ -413,15 +413,15 @@ OpenSSL podría no estar instalado.</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select mail folders for watching.&lt;br/&gt;&lt;br/&gt;If the dialog doesn&apos;t show your folder, &lt;i&gt;Ctrl + Shift click&lt;/i&gt; to open a file selection dialog that allows adding any mork file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecciona las carpetas de correo que quieras supervisar.&lt;br/&gt;&lt;br/&gt;Si tu carpeta no aparece, haz clic mientras mantienes pulsadas &lt;i&gt;Ctrl y Mayús&lt;/i&gt; para seleccionar un archivo de índice Mork.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>Unread change cmd:</source>
-        <translation type="unfinished"></translation>
+        <source>Command on unread count change:</source>
+        <translation>Comando al cambiar el contador de mensajes sin leer:</translation>
     </message>
     <message>
-        <source>Could not load the icon from this file. Try loading the icon in an image editing tool and saving it in a different format.</source>
-        <translation type="unfinished"></translation>
+        <source>Could not load the icon from this file. Try saving the image in a different format.</source>
+        <translation>No se pudo cargar el icono de este archivo. Prueba a guardar la imagen en otro formato.</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This changes the font thickness, i.e. makes the font bold.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -429,7 +429,7 @@ OpenSSL podría no estar instalado.</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If not empty, this command will be invoked every time the unread counter changes (including when it becomes zero). It is invoked via shell, as-is, with %NEW% replaced by the new unread count value and %OLD% replaced with the old unread count value (which may be the same as new).&lt;/p&gt;&lt;p&gt;Most users don&apos;t need this functionality and should leave it empty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si indicas un comando, se ejecutará cada vez que cambie el contador de mensajes sin leer, incluso si baja a cero. El intérprete de comandos sustituye %NEW% por el valor nuevo y %OLD% por el anterior. Ambos valores pueden coincidir.&lt;/p&gt;&lt;p&gt;Si no necesitas esta función, deja el campo vacío.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Check for new updates when Birdtray starts.</source>
@@ -440,48 +440,48 @@ OpenSSL podría no estar instalado.</translation>
         <translation>Comprobar si existe una nueva versión de Birdtray.</translation>
     </message>
     <message>
-        <source>Support non-NETWM compliant WMs</source>
-        <translation type="unfinished"></translation>
+        <source>Support window managers that do not comply with NETWM (X11 only)</source>
+        <translation>Compatibilidad con gestores de ventanas que no cumplen NETWM (solo X11)</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If your desktop manager is not fully NETWM compliant, you may need to check this checkbox so it can detect Thunderbird window and is able to minimise and hide it.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;On X11, enable this option if your window manager does not fully support NETWM and Birdtray cannot detect or hide Thunderbird.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;En X11, activa esta opción si tu gestor de ventanas no es totalmente compatible con NETWM y Birdtray no puede detectar u ocultar Thunderbird.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>At startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Al iniciar</translation>
     </message>
     <message>
         <source>When hiding Thunderbird</source>
-        <translation type="unfinished"></translation>
+        <translation>Al ocultar Thunderbird</translation>
     </message>
     <message>
         <source>When showing Thunderbird</source>
-        <translation type="unfinished"></translation>
+        <translation>Al mostrar Thunderbird</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If enabled, this option adds the &amp;quot;Ignore currently unread emails&amp;quot; action to the context menu. This action allows you to ignore the emails which are currently unread. Birdtray would then pretend there are no unread emails left, and would only show new emails over the ignored count.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;For example, if there were 10 unread emails, and you clicked on &amp;quot;Ignore&amp;quot; action, Birdtray will show no unread email indicator as long as unread email count remains at 10. Once new email is received and you have 11 total unread emails, Birdtray will show the new email count as 1.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si se habilita, esta opción añade la acción de &amp;quot;Ignorar correos no leíodos actualmente&amp;quot; al menú contextual. Esta acción le permite ignorar los corresos que actualmente son no leídos&lt;/p&gt;&lt;p&gt;&lt;br/&gt;Por ejemplo, si hay 10 correos no leidos, y pulsa en &amp;quot;Ignorar&amp;quot;, Birdtray mostraŕa el indicador de mensajes no leidos mientras el contador de mensajes no leídos permanece en 10. Una vez que un correo nuevo es recibido y tiene 11 correos no leídos totales, Bridtray mostrará el contador de correos nuevos como 1.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>Start Thunderbird by clicking on the tray icon if it was closed</source>
-        <translation type="unfinished"></translation>
+        <source>Open Thunderbird when clicking the tray icon if it is closed</source>
+        <translation>Si Thunderbird está cerrado, abrirlo al pulsar el icono de la bandeja del sistema</translation>
     </message>
     <message>
-        <source>When detecting a change, wait</source>
-        <translation type="unfinished"></translation>
+        <source>When a change is detected, wait</source>
+        <translation>Al detectar un cambio, esperar</translation>
     </message>
     <message>
         <source> milliseconds</source>
-        <translation type="unfinished"></translation>
+        <translation> milisegundos</translation>
     </message>
     <message>
         <source>before updating the unread counter.</source>
-        <translation type="unfinished"></translation>
+        <translation>antes de actualizar el contador de mensajes sin leer.</translation>
     </message>
     <message>
         <source>Thunderbird process name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre del proceso de Thunderbird:</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -499,7 +499,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;For those of you who appreciate my work on Birdtray, which is being developed in my free time, you can do it here: &lt;/span&gt;&lt;a href=&quot;https://paypal.me/ulduzsoft&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline; color:#2980b9;&quot;&gt;https://paypal.me/ulduzsoft&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; text-decoration: underline; color:#2980b9;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Thank you for your continuous support!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="vanished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -514,6 +514,42 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Para aquellos que aprecian mi trabajo en Birdtray, que ha sido desarrollado en mi tiempo libre, puede hacerlo aquí: &lt;/span&gt;&lt;a href=&quot;https://paypal.me/ulduzsoft&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline; color:#2980b9;&quot;&gt;https://paypal.me/ulduzsoft&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; text-decoration: underline; color:#2980b9;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;¡Gracias por su apoyo continuo!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Birdtray %1 — Resolute / X11 and Plasma Wayland</source>
+        <translation>Birdtray %1 — Resolute / X11 y Plasma Wayland</translation>
+    </message>
+    <message>
+        <source>Community edition with unread-mail monitoring and window controls for Thunderbird.</source>
+        <translation>Edición comunitaria con contador de mensajes sin leer y control de ventanas de Thunderbird.</translation>
+    </message>
+    <message>
+        <source>Built on %1 with Qt %2.</source>
+        <translation>Compilado el %1 con Qt %2.</translation>
+    </message>
+    <message>
+        <source>Help and bug reports for this edition</source>
+        <translation>Ayuda y avisos de errores de esta edición</translation>
+    </message>
+    <message>
+        <source>Credits and license</source>
+        <translation>Créditos y licencia</translation>
+    </message>
+    <message>
+        <source>Original Birdtray project</source>
+        <translation>Proyecto original de Birdtray</translation>
+    </message>
+    <message>
+        <source>Community edition maintained by WonderSkydive.</source>
+        <translation>Edición comunitaria mantenida por WonderSkydive.</translation>
+    </message>
+    <message>
+        <source>Community edition</source>
+        <translation>Edición comunitaria</translation>
+    </message>
+    <message>
+        <source>Project for this community edition</source>
+        <translation>Proyecto de esta edición comunitaria</translation>
     </message>
 </context>
 <context>

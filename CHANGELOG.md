@@ -2,6 +2,11 @@
 
 [Español](CHANGELOG.es.md)
 
+## 1.14.0 — Resolute — 2026-11-17
+
+- Added Thunderbird window controls for KDE Plasma Wayland alongside X11.
+- Updated English and Spanish text, help links and package metadata.
+
 ## 1.13.0 — Resolute / X11 — 2026-11-02
 
 Community release based on Birdtray v1.11.4, commit `7261ff0`.

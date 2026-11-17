@@ -7,6 +7,8 @@
 // TODO
 #else
 #  include "windowtools_x11.h"
+#  include "windowtools_kwin.h"
+#  include <QGuiApplication>
 #endif
 
 
@@ -31,7 +33,10 @@ WindowTools *WindowTools::create()
 #elif defined (Q_OS_MAC)
     tools = 0;
 #else
-    tools = new WindowTools_X11();
+    if (QGuiApplication::platformName().startsWith("wayland"))
+        tools = new WindowTools_KWin();
+    else
+        tools = new WindowTools_X11();
 #endif
     }
 

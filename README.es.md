@@ -1,124 +1,37 @@
-[English](README.md) | **Español**
+# Birdtray para Thunderbird
 
-# Birdtray para Thunderbird — Resolute / X11
+[English](README.md)
 
-Birdtray lleva Thunderbird a la bandeja del sistema de Linux: consulta el contador
-de mensajes sin leer, oculta y restaura su ventana y accede a acciones de correo
-sin instalar ninguna extensión en Thunderbird.
-
-Esta edición está empaquetada para **Ubuntu 26.04 Resolute, amd64 y X11**.
-
-**Comprobado en Kubuntu 26.04 con Plasma 6 y X11**, mediante varias semanas de uso.
-
-Versión comunitaria **1.13.0**, basada en el código fuente de
-[Birdtray 1.11.4](https://github.com/gyunaev/birdtray/tree/v1.11.4).
-Conserva la licencia GPLv3 y los créditos del proyecto original.
-
-## ¿Por qué esta edición comunitaria?
-
-**Edición comunitaria actualizada frente al paquete Birdtray 1.9.0+ds-2.1 distribuido por Ubuntu. Utiliza como base el código original 1.11.4 e incorpora correcciones adicionales para evitar bloqueos del contador de mensajes sin leer.**
-
-El archivo de Ubuntu 26.04 Resolute lista **Birdtray 1.9.0+ds-2.1**
-([ficha del paquete](https://packages.ubuntu.com/resolute/birdtray); comprobado
-el 4 de noviembre de 2026). Esta edición parte del **código fuente original
-1.11.4, más reciente**, y añade correcciones verificadas mediante pruebas de
-regresión para bloqueos del contador causados por pérdida de vigilancia de los
-índices o por lecturas aplazadas indefinidamente durante escrituras continuas.
-
-| Versión | Procedencia |
-| --- | --- |
-| 1.9.0+ds-2.1 | Paquete listado en el archivo de Ubuntu 26.04 |
-| 1.11.4 | Código fuente original usado como base de esta edición |
-| 1.13.0 | Esta edición comunitaria, con las correcciones adicionales del monitor |
-
-Nuestra numeración identifica esta publicación comunitaria; no es una nueva
-versión oficial del proyecto original. Las correcciones concretas se detallan
-más abajo.
+Birdtray muestra los mensajes sin leer de Thunderbird en la bandeja del sistema y permite ocultar o restaurar su ventana. Esta edición comunitaria funciona en **X11 y KDE Plasma Wayland** sin extensiones de Thunderbird.
 
 ## Funciones
 
-- Mostrar el contador de mensajes sin leer en el icono de la bandeja.
-- Hacer parpadear o animar el icono mientras haya correo sin leer, opcionalmente.
-- Posponer la indicación de correo sin leer de Birdtray durante un tiempo elegido.
-- Supervisar las carpetas de correo seleccionadas y asignarles colores distintos.
-- Ocultar y restaurar la ventana de Thunderbird desde el icono o su menú.
-- Abrir Thunderbird al iniciar Birdtray y cerrarlo al salir, si se configura así.
-- Personalizar los iconos de la bandeja y la fuente y los colores del contador.
-- Detectar la presencia de la ventana de Thunderbird e indicar cuando está cerrada.
-- Redactar nuevos correos desde el menú, con plantillas predefinidas opcionales.
+- Supervisa las carpetas que elijas y muestra el contador en distintos colores según la cuenta.
+- Anima el icono al llegar correo nuevo y permite aplazar las notificaciones.
+- Oculta y restaura Thunderbird desde la bandeja. También puede ocultarlo al minimizarlo.
+- Puede iniciar Thunderbird junto con Birdtray, reabrirlo desde la bandeja o cerrarlo al salir de Birdtray.
+- Permite personalizar el icono y redactar mensajes a partir de plantillas.
 
-Birdtray lee directamente los índices locales Mork (`.msf`) de las carpetas de
-Thunderbird, por lo que no necesita ninguna extensión de Thunderbird.
+## Descarga e instalación
 
-## Descargar e instalar
-
-En la sección **Releases** de este repositorio, descarga:
-
-```text
-birdtray_1.13.0-1.resolute1_x11_amd64.deb
-```
-
-Desde la carpeta donde lo hayas descargado:
+El paquete Debian **1.14.0** está destinado a **Kubuntu 26.04 Resolute (amd64)**. La integración de ventanas de la 1.14 se probó en X11 y en Plasma 6 con Wayland. Descárgalo desde [Publicaciones](https://github.com/WonderSkydive/birdtray/releases/latest), cierra Birdtray si está abierto y abre el archivo con Discover o ejecuta:
 
 ```sh
-sudo apt install './birdtray_1.13.0-1.resolute1_x11_amd64.deb'
+sudo apt install ./birdtray_1.14.0-1.resolute1_amd64.deb
 ```
 
-Se instala como `birdtray`, actualiza las versiones anteriores de ese paquete y
-conserva la configuración habitual. Cierra Birdtray antes de actualizarlo y
-vuelve a abrirlo desde el menú de aplicaciones al terminar. Si está configurado
-para cerrar Thunderbird al salir, ten presente ese comportamiento.
+El paquete actualiza la instalación de `birdtray` y reutiliza sus preferencias. Abre Birdtray desde el menú de aplicaciones y elige las carpetas de Thunderbird en **Preferencias → Supervisar**.
 
-En una instalación nueva, selecciona en la configuración de Birdtray las carpetas
-de correo que quieres supervisar. Puedes configurar también las acciones del
-icono para mostrar y ocultar Thunderbird.
+## Novedades de la 1.14.0
 
-## Correcciones incluidas
+El control de ventanas en Plasma Wayland utiliza KWin. X11 sigue disponible y ambas sesiones usan el contador con la recuperación de la vigilancia de índices introducida en la edición comunitaria. Esta versión también actualiza la interfaz en inglés y español y los metadatos del paquete.
 
-- Recupera la vigilancia de índices `.msf` que Thunderbird elimina o sustituye.
-- Vuelve a leer los índices periódicamente: si el intervalo configurado es cero,
-  utiliza una comprobación de recuperación cada 30 segundos.
-- Evita que una secuencia continua de escrituras aplace indefinidamente la lectura.
-- Mantiene el vigilante en el hilo correspondiente y detiene sus temporizadores
-  en ese hilo al terminar.
-- Retira rutas que dejan de estar configuradas y evita el desbordamiento del
-  intervalo al convertir segundos en milisegundos.
+## Compilación y ayuda
 
-El acceso del menú utiliza el backend X11. La edición usa Qt 5.15.18 de Ubuntu
-26.04 y puede ejecutarse en Plasma 6.
-
-## Contador después de suspender o hibernar
-
-Birdtray consulta el contador que Thunderbird guarda en el índice local de cada
-carpeta. En un caso comprobado, Thunderbird mostraba cero en pantalla mientras
-su índice aún guardaba cuatro; al abrir la carpeta, el índice pasó a cero y
-Birdtray reflejó el cambio inmediatamente.
-
-Si ocurre esa diferencia, abrir la carpeta en Thunderbird puede actualizar su
-índice. La relectura periódica de Birdtray refleja el valor disponible en disco.
-
-## Desinstalar
-
-```sh
-sudo apt remove birdtray
-```
-
-Se retiran los archivos del paquete. La configuración personal se conserva.
-Después puedes instalar otra versión si lo deseas. Las dependencias compartidas
-se gestionan con el comportamiento habitual de APT.
-
-## Compilar y verificar
-
-Las instrucciones están en [BUILD.es.md](BUILD.es.md). El paquete no incorpora servicios,
-autoinicio ni scripts que abran o cierren aplicaciones al instalarse.
-
-Las siete pruebas automáticas cubren el parser y sus muestras, las utilidades y
-la recuperación del monitor ante sustitución, borrado y recreación de índices,
-escrituras continuas y recuperación periódica.
+Consulta [Compilar Birdtray](BUILD.es.md) para compilar, ejecutar las pruebas y generar el paquete. Para pedir ayuda, usa [Discusiones](https://github.com/WonderSkydive/birdtray/discussions). Si encuentras un fallo reproducible, indícalo en [Incidencias](https://github.com/WonderSkydive/birdtray/issues) con tu tipo de sesión y versión de Thunderbird.
 
 ## Créditos y licencia
 
-Proyecto original: [gyunaev/birdtray](https://github.com/gyunaev/birdtray).
-Consulta [CREDITS.md](CREDITS.md), [CHANGELOG.es.md](CHANGELOG.es.md) y
-[LICENSE.txt](LICENSE.txt). Los créditos de autores y traducciones del programa
-se conservan. La numeración 1.13.0 identifica esta modificación comunitaria.
+WonderSkydive mantiene esta edición comunitaria, desarrollada a partir de [Birdtray 1.11.4](https://github.com/gyunaev/birdtray/tree/v1.11.4). La integración con KWin se inspiró en [stark1tty/birdtray-wayland](https://github.com/stark1tty/birdtray-wayland). Consulta los [créditos](CREDITS.md) y la [licencia GPLv3](LICENSE.txt).
+
+[Support WonderSkydive](https://www.paypal.com/ncp/payment/KWEHYT4HDTARE)
